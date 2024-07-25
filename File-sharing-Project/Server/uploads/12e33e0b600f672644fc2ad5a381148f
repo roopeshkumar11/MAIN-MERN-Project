@@ -1,0 +1,132 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "61301760",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "9335be3f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#perceptroin model\n",
+    "def perCeptron(x,w,b):\n",
+    "    yin=np.dot(x,w)+b\n",
+    "    y=actiavtionFunc(yin)\n",
+    "    return y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "1cc964d7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#activation function\n",
+    "def actiavtionFunc(n):\n",
+    "    if n>=0 :\n",
+    "        return 1\n",
+    "    else :\n",
+    "        return 0"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "c75e5829",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def andx(x):\n",
+    "    w=np.array([1,1])\n",
+    "    b=-1.5\n",
+    "    return perCeptron(x,w,b)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "18cf019b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "test1=np.array([0,0])\n",
+    "test2=np.array([0,1])\n",
+    "test3=np.array([1,0])\n",
+    "test4=np.array([1,1])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "6992cc74",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "0\n",
+      "0\n",
+      "1\n"
+     ]
+    }
+   ],
+   "source": [
+    "def reesult(test):\n",
+    "    print(andx(test))\n",
+    "reesult(test1)\n",
+    "reesult(test2)\n",
+    "reesult(test3)\n",
+    "reesult(test4)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7467d680",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8b6f324b",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
