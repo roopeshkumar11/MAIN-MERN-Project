@@ -14,12 +14,13 @@ Users can create and share their thoughts in a simple and intuitive interface. E
 - ✍ **Thought Management:** Users can add, update, and delete thoughts
 
 ## Screenshot
-![Project Screenshot](image_readme_file/frontui.png)
-![Project Screenshot](image_readme_file/registerpost.png)
-![Project Screenshot](image_readme_file/login.png)
-![Project Screenshot](image_readme_file/seepost.png)
-![Project Screenshot](image_readme_file/updatepost.png)
-![Project Screenshot](image_readme_file/deletepost.png)
+| Home Page | Register | Login |
+|-----------|----------|-------|
+| ![Home Page](image_readme_file/frontui.png) | ![Register](image_readme_file/registerpost.png) | ![Login](image_readme_file/login.png) |
+
+| View Post | Update Post | Delete Post |
+|-----------|-------------|-------------|
+| ![View Post](image_readme_file/seepost.png) | ![Update Post](image_readme_file/updatepost.png) | ![Delete Post](image_readme_file/deletepost.png) |
 
 ## Tech Stack
 ### Frontend
