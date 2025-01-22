@@ -14,8 +14,12 @@ Users can create and share their thoughts in a simple and intuitive interface. E
 - ✍ **Thought Management:** Users can add, update, and delete thoughts
 
 ## Screenshot
-![Project Screenshot](image_readme_file/JUSTTHOUGHT - Google Chrome 1_22_2025 10_57_35 PM.png)
-
+![Project Screenshot](image_readme_file/frontui.png)
+![Project Screenshot](image_readme_file/registerpost.png)
+![Project Screenshot](image_readme_file/login.png)
+![Project Screenshot](image_readme_file/seepost.png)
+![Project Screenshot](image_readme_file/updatepost.png)
+![Project Screenshot](image_readme_file/deletepost.png)
 
 ## Tech Stack
 ### Frontend
