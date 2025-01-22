@@ -13,6 +13,9 @@ Users can create and share their thoughts in a simple and intuitive interface. E
 - 📦 **Database:** MongoDB
 - ✍ **Thought Management:** Users can add, update, and delete thoughts
 
+## Screenshot
+![Project Screenshot](path/to/your/image.png)
+
 ## Tech Stack
 ### Frontend
 - Vite
