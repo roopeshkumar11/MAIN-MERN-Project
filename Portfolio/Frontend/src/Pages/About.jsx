@@ -4,7 +4,7 @@ function About() {
 
     return (
         <>
-            <div className="flex items-center justify-center min-h-screen bg-black p-6">
+            <div className="flex items-center justify-center  bg-black p-6">
                 <div className="text-center w-full md:max-w-[50%] text-gray-300">
                     <h1 className="text-4xl font-bold mb-4">About Me</h1>
                     <p className="text-xl mb-4 text-[#4FC3F7]">Get to Know Me</p>
@@ -31,7 +31,9 @@ function About() {
                        
                         className="bg-blue-500 text-white px-6 py-3 rounded-full text-lg transition duration-300 hover:bg-blue-600"
                     >
-                        Download Resume
+                        <a href="/roopesh_resume.pdf" download="roopesh_resume.pdf" className="bg-blue-500 text-white p-2 rounded">
+      Download  Resume
+    </a>
                     </button>
                 </div>
             </div>

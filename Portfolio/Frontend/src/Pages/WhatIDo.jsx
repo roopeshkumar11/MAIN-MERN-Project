@@ -47,7 +47,7 @@ function WhatIDo() {
       <h1 className="text-gray-300 pt-6 text-4xl font-bold">What I Do</h1>
       <p className="text-xl text-[#4FC3F7]">My Services</p>
 
-      <div className="flex justify-center items-center min-h-screen">
+      <div className="flex justify-center items-center ">
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 py-10">
           {cardsData.map((card, index) => (
             <Card

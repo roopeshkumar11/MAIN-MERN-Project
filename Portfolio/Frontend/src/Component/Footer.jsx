@@ -1,3 +1,5 @@
+import { FaGithub, FaFacebook, FaLinkedin } from 'react-icons/fa';
+
 function Footer() {
   return (
     <div className="bg-black text-gray-300 px-6 py-10">
@@ -80,7 +82,17 @@ function Footer() {
 
       <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
         <p>2025 All rights reserved</p>
-        <div className="mt-2 md:mt-0">Logo</div>
+        <div className="mt-2 md:mt-0"><div className="flex gap-6">
+      <a href="https://github.com/roopeshkumar11/" target="_blank" rel="noopener noreferrer">
+        <FaGithub className="text-2xl text-gray-300 hover:text-gray-500 transition duration-300" />
+      </a>
+      <a href="https://www.linkedin.com/in/roopeshkumar11/" target="_blank" rel="noopener noreferrer">
+        <FaFacebook className="text-2xl text-gray-300 hover:text-blue-600 transition duration-300" />
+      </a>
+      <a href="https://www.linkedin.com/in/roopeshkumar11/" target="_blank" rel="noopener noreferrer">
+        <FaLinkedin className="text-2xl text-gray-300 hover:text-blue-700 transition duration-300" />
+      </a>
+    </div></div>
       </div>
     </div>
   );
