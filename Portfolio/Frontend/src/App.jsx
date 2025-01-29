@@ -10,6 +10,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import Layout from './Pages/Layout'
 import Adminpage from './Pages/Adminpage'
+import Seemessagedel from './Pages/Seemessagedel'
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
   <Route path='/' element={<Home/>} />
 
   <Route path='/admin' element={<Adminpage/>}/>
+  <Route path='/del/:id' element={<Seemessagedel/>}/>
   {/* <Route path='' element={<About/>}/>
   <Route path='/services' element={ <WhatIDo/>}/>
   <Route path='/' element={<Body_page/>}/>
