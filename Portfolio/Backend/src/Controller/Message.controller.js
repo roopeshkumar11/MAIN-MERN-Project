@@ -34,4 +34,23 @@ const getAllMessages = async (req, res) => {
 };
 
 
-export { sendMessage,getAllMessages };
+
+const getsingledata=async(req,res)=>{
+    try {
+        const {id}=req.params;
+
+        const sdata=await Message.findById(id);
+        res.status(200).json(sdata);
+        
+    } catch (error) {
+        console.error(error); 
+        res.status(500).json({ message: "Internal server error." });
+    }
+}
+
+
+const getsingledatadelete=async(req,res)=>{
+    const {id}=req.params
+const del=await Message.findByIdAndDelete(id);
+}
+export { sendMessage,getAllMessages,getsingledata,getsingledatadelete };
