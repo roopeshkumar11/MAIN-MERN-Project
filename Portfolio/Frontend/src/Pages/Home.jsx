@@ -5,6 +5,7 @@ import About from './About'
 import WhatIDo from './WhatIDo'
 import Project from './Project'
 import Footer from '../Component/Footer'
+import Adminpage from './Adminpage'
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
         <WhatIDo/>
         <Project/>
         <Footer/>
+     
 
     </div>
   )

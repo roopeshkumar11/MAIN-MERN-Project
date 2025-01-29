@@ -21,6 +21,7 @@ export default function Navbar() {
         </li>
         <li><Link to="/" className="hover:text-white">Service</Link></li>
         <li><Link to="/" className="hover:text-white">Resume</Link></li>
+        <li><Link to="/admin" className="hover:text-white">Admin Login</Link></li>
       </ul>
 
       {/* Right - Contact Button */}
@@ -40,6 +41,7 @@ export default function Navbar() {
           <Link to="/" className="hover:text-white" onClick={() => setIsOpen(false)}>Project</Link>
           <Link to="/" className="hover:text-white" onClick={() => setIsOpen(false)}>Service</Link>
           <Link to="/" className="hover:text-white" onClick={() => setIsOpen(false)}>Resume</Link>
+          <Link to="/admin" className="hover:text-white" onClick={() => setIsOpen(false)}>Admin Login</Link>
           <Link to="/" className="btn btn-outline border-gray-300 text-gray-300 hover:bg-gray-700 text-xl" onClick={() => setIsOpen(false)}>
             Contact Us
           </Link>
