@@ -10,12 +10,12 @@ import Adminpage from './Adminpage'
 function Home() {
   return (
     <div>
-        <Navbar/>
+        {/* <Navbar/> */}
         <Body_page/>
         <About/>
         <WhatIDo/>
         <Project/>
-        <Footer/>
+        {/* <Footer/> */}
      
 
     </div>

@@ -1,50 +1,30 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Component/Navbar";
+import Footer from "./Component/Footer";
+import Home from "./Pages/Home";
 
-import React from 'react'
-import Navbar from './Component/Navbar'
-import Footer from './Component/Footer'
-import About from './Pages/About'
-import WhatIDo from './Pages/WhatIDo'
-import Project from './Pages/Project'
-import Body_page from './Pages/Body_page'
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
-import Home from './Pages/Home'
-import Layout from './Pages/Layout'
-import Adminpage from './Pages/Adminpage'
-import Seemessagedel from './Pages/Seemessagedel'
-
+import Seemessagedel from "./Pages/Seemessagedel";
+import AdminRegister from "./Pages/AdminRegister";
+import Login from "./Pages/Login";
+import Adminpage from "./Pages/Adminpage";
 
 function App() {
   return (
-    
-    <>
+    <Router>
+      <Navbar /> 
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/admin" element= {<AdminRegister/>}/>
+        <Route path="/del/:id" element={<Seemessagedel />} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/addminm" element={<Adminpage/>} />
 
-
-{/* <Body_page/>
-<About/>
-<WhatIDo/> 
- <Project/> */}
-
-<Router>
-
-  <Routes>
-  <Route path='/' element={<Home/>} />
-
-  <Route path='/admin' element={<Adminpage/>}/>
-  <Route path='/del/:id' element={<Seemessagedel/>}/>
-  {/* <Route path='' element={<About/>}/>
-  <Route path='/services' element={ <WhatIDo/>}/>
-  <Route path='/' element={<Body_page/>}/>
-  <Route path='/projects' element={<Project/>}/> */}
-
-  </Routes>
- 
-</Router>
-
-
-
-    </>
-
-  )
+        
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
-export default App
+export default App;

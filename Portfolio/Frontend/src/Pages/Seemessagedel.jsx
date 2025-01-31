@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Card_message from "../Component/Card_message";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 
 
 
 export default function Seemessagedel() {
 
+  const navigate = useNavigate();
     const {id}=useParams();
 
     const [singledata,setsingledata]=useState();
@@ -30,12 +31,19 @@ export default function Seemessagedel() {
 
 
     const handlesubmit=async()=>{
+     
+      console.log("::: ",navigate)
         try {
             await axios.delete(`http://localhost:4000/api/deletedata/${id}`)
+          navigate("/admin")
+           
+
             
         } catch (error) {
             alert("Error during deletetion: ",error)
         }
+
+      
     }
   return (
     <div className="bg-black min-h-screen flex justify-center items-center p-5">

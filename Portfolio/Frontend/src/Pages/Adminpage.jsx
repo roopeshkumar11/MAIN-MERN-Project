@@ -24,7 +24,7 @@ function Adminpage() {
 
   return (
     <>
-      <Navbar />
+      
       <div className="bg-black text-gray-300 min-h-screen">
         <h1 className="text-4xl font-bold text-center ">Admin</h1>
 
@@ -56,7 +56,7 @@ function Adminpage() {
           )}
         </div>
       </div>
-      <Footer />
+    
     </>
   );
 }

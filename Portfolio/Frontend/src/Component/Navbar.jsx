@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Logout from "../Pages/Logout"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className="bg-black text-gray-300 shadow-lg px-6 py-4 flex justify-between items-center">
       {/* Left - Logo */}
-      <p  className="text-2xl font-bold text-gray-300">Roopesh Kumar</p>
+      <p  className="text-2xl font-bold text-gray-300"><Logout/></p>
 
       {/* Middle - Navigation Menu (Desktop) */}
       <ul className="hidden md:flex gap-x-6">
@@ -20,14 +21,15 @@ export default function Navbar() {
           </ul>
         </li>
         <li><Link to="/" className="hover:text-white">Service</Link></li>
-        <li><Link to="/" className="hover:text-white">Resume</Link></li>
+        <li><Link to="/addminm" className="hover:text-white">Resume</Link></li>
         <li><Link to="/admin" className="hover:text-white">Admin Login</Link></li>
       </ul>
 
-      {/* Right - Contact Button */}
+     
       <Link to="/" className="hidden md:block btn btn-outline border-gray-300 text-gray-300 hover:bg-gray-700 text-xl">
         Contact Us
       </Link>
+    
 
       {/* Mobile Menu Button */}
       <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
