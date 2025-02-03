@@ -6,7 +6,7 @@ const RouterMessage = express.Router();
 
 RouterMessage.post("/sendmessage", sendMessage);
 RouterMessage.get("/getalldmessage",authenticateAdmin, getAllMessages);
-RouterMessage.get("/singledata/:id",getsingledata)
-RouterMessage.delete("/deletedata/:id",getsingledatadelete)
+RouterMessage.get("/singledata/:id",authenticateAdmin,getsingledata)
+RouterMessage.delete("/deletedata/:id",authenticateAdmin,getsingledatadelete)
 
 export default RouterMessage;
