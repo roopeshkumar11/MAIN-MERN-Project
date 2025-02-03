@@ -15,9 +15,13 @@ export default function Seemessagedel() {
 
     useEffect(()=>{
         const fetchdatasingle=async()=>{
+          const token = localStorage.getItem("token");
             try {
     
-                const response=await axios.get(`http://localhost:4000/api/singledata/${id}`)
+                const response=await axios.get(`http://localhost:4000/api/singledata/${id}`,{
+                  headers: { Authorization: `Bearer ${token}` },
+                })
+                
                 setsingledata(response.data);
                 console.log(response.data)
                 
@@ -31,12 +35,13 @@ export default function Seemessagedel() {
 
 
     const handlesubmit=async()=>{
-     
-      console.log("::: ",navigate)
+      const token = localStorage.getItem("token");
+   
         try {
-            await axios.delete(`http://localhost:4000/api/deletedata/${id}`)
-          navigate("/admin")
-           
+            await axios.delete(`http://localhost:4000/api/deletedata/${id}`,{
+              headers: { Authorization: `Bearer ${token}` },
+            })
+         
 
             
         } catch (error) {

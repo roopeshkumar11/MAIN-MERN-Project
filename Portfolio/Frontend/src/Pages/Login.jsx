@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Login = () => {
+const navigate=useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -21,7 +23,7 @@ const Login = () => {
       if (response.data.token) {
         
         localStorage.setItem("token", response.data.token);
-
+        
         
         axios.defaults.headers.common["Authorization"] = `Bearer ${response.data.token}`;
 
@@ -48,6 +50,7 @@ const Login = () => {
 
     if (result.success) {
       setMessage(result.message);
+      navigate("/addminm")
       
     } else {
       setError(result.message);
@@ -96,6 +99,12 @@ const Login = () => {
             Login
           </button>
         </form>
+        <p className="text-center mt-4">
+  Don't have an account?{" "}
+  <Link to="/adminregiter" className="text-blue-600 font-medium hover:underline">
+    Register here
+  </Link>
+</p>
       </div>
     </div>
   );

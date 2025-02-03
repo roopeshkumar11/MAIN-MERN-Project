@@ -19,6 +19,7 @@ function App() {
         <Route path="/del/:id" element={<Seemessagedel />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/addminm" element={<Adminpage/>} />
+        <Route path="/adminregiter" element={<AdminRegister/>}/>
 
         
       </Routes>

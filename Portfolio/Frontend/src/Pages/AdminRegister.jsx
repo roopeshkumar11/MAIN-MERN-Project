@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import { Link, useNavigate } from "react-router-dom";
 const AdminRegister= () => {
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -18,6 +19,8 @@ const AdminRegister= () => {
       if (response.data.token) {
         
         localStorage.setItem("token", response.data.token);
+  
+        
         return { success: true, message: "Registration successful" };
       } else {
         return { success: false, message: response.data.message };
@@ -41,7 +44,7 @@ const AdminRegister= () => {
     if (result.success) {
       setMessage(result.message);
       // Redirect to login or another page after registration success
-      window.location.href = "/login";
+      window.location.href = "/addminm";
     } else {
       setError(result.message);
     }
@@ -89,6 +92,12 @@ const AdminRegister= () => {
             Register
           </button>
         </form>
+        <p className="text-center mt-4">
+  Already have an account?{" "}
+  <Link to="/login" className="text-blue-600 hover:underline">
+    Login here
+  </Link>
+</p>
       </div>
     </div>
   );
