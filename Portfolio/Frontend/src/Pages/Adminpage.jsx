@@ -111,9 +111,9 @@ function Adminpage() {
                 message={msg.Message}
               />
               <div className="mt-4">
-                <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                <Link to={"/replymessage/"+msg._id} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
                   Reply Message
-                </button>
+                </Link>
 
                 <Link   to={"/del/"+msg._id}  className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700">
                    Delete Message

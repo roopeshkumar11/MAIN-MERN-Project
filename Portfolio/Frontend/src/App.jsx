@@ -8,6 +8,7 @@ import Seemessagedel from "./Pages/Seemessagedel";
 import AdminRegister from "./Pages/AdminRegister";
 import Login from "./Pages/Login";
 import Adminpage from "./Pages/Adminpage";
+import Replymessage from "./Pages/Replymessage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/addminm" element={<Adminpage/>} />
         <Route path="/adminregiter" element={<AdminRegister/>}/>
+        <Route path="/replymessage/:id" element={<Replymessage/>}/>
 
         
       </Routes>
